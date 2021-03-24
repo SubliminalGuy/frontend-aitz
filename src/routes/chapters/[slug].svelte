@@ -1,34 +1,34 @@
 <script context="module">
-    import ApolloClient, { gql } from 'apollo-boost';  
-    import moment from 'moment';
+        import ApolloClient, { gql } from 'apollo-boost';  
+        import moment from 'moment';
 
-    const blogQuery = gql`
-    query Blogs($Slug: String!) {
-            blogs: blogs(where: { Slug: $Slug }) {
-                    id
-                    Title
-                    Description
-                    Published
-                    Body
-                    Slug
-            }
-            }
-    `;
-    export async function preload({params, query}) {
-            const client = new ApolloClient({ 
-                    uri: 'http://bookend-aitz.herokuapp.com/graphql',
-                    fetch: this.fetch
-                     });
-            const results = await client.query({
-                    query: blogQuery,
-                    variables: {"Slug" : params.slug} 
-            })
-            return {post: results.data.blogs}
-    }
+        const blogQuery = gql`
+        query Blogs($Slug: String!) {
+                blogs: blogs(where: { Slug: $Slug }) {
+                        id
+                        Title
+                        Description
+                        Published
+                        Body
+                        Slug
+                }
+                }
+        `;
+        export async function preload({params, query}) {
+                const client = new ApolloClient({ 
+                        uri: 'http://bookend-aitz.herokuapp.com/graphql',
+                        fetch: this.fetch
+                        });
+                const results = await client.query({
+                        query: blogQuery,
+                        variables: {"Slug" : params.slug} 
+                })
+                return {post: results.data.blogs}
+        }
 </script>
 
 <script>
-    export let post;
+        export let post;
 </script>
 
 <style>
