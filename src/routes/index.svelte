@@ -11,7 +11,7 @@
 	
 	img {
 			width: 100%;
-			max-width: 400px;
+			max-width: 500px;
 			margin: 0 0 1em 0;
 	}
 	p {
@@ -33,7 +33,7 @@
 <h1>Adults in the <b>Zoom</b></h1>
 
 <figure>
-	<img alt='the birds on a line' src='bird-bg.png'>
+	<img alt="people voting in auditorium" src='voting_assembly.jpg'>
 </figure>
 
 <p>

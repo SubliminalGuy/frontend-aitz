@@ -13,5 +13,13 @@ Wir sind inspiriert von einem Europa der Vernunft, Freiheit, Toleranz und Phanta
 
 <p>Das Buch ist ein spannender Erfahrungsbericht aus dem Inneren einer der faszinierendsten Bewegungen des 21. Jahrhunderts und ein Handbuch für Alles was nach DiEM25 kommt.
 </p>
+<style>
 
+        
+p {
+        text-align: justify;
+        line-height: 1.8rem;
+        font-size: 1.2rem;
+}
 
+</style>
