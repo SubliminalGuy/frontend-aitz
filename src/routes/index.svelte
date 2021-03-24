@@ -33,7 +33,7 @@
 <h1>Adults in the <b>Zoom</b></h1>
 
 <figure>
-	<img alt='the birds on a line' src='bird-bg.png'>
+	<img alt='the birds on a line' src='./bird-bg.png'>
 </figure>
 
 <p>
