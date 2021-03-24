@@ -48,6 +48,12 @@
                 margin-bottom: 2rem;
         }
 
+        h4 {
+                font-size: 1.2rem;
+                margin-top: 1.5rem;
+                font-weight: 600;
+        }
+
         .content :global(h2) {
                 font-size: 1.7em;
                 font-weight: 500;
@@ -87,7 +93,7 @@
 
 {/each}
 
-<h2>Eure Kommentare</h2>
+<h4>Eure Kommentare</h4>
 <div id="commento"></div>
 
 <p>⇺<a href="chapters"> back to chapters</a></p>
