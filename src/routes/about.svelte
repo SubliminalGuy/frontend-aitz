@@ -15,12 +15,3 @@ Wir sind inspiriert von einem Europa der Vernunft, Freiheit, Toleranz und Phanta
 </p>
 
 
-<!--
-Inhalt
-
-
-Résumé
-Ich erzähle in dem Buch meine Weg durch das Labyrinth DiEM25 und analysiere im Anschluss daran die Schwachpunkte sowohl der lokalen als auch der internationalen Ebene. Dabei greife ich auf den Wissensschatz des Community Organizing und anderer erfolgreicher Bewegungen, die Methoden des Systemischen Konsensierens und neue digitale Tools zurück, die eine internationale Koordination und basisdemokratische Entscheidungsfindung möglich machen. 
-Das Buch ist ein spannender Erfahrungsbericht aus dem Inneren einer der faszinierendsten Bewegungen des 21. Jahrhunderts und ein Handbuch für Alles was nach DiEM25 kommt.
-
--->
