@@ -74,6 +74,7 @@
 </style>
 <svelte:head>
         <title>Adults in the Zoom</title>
+        <script defer src="https://cdn.commento.io/js/commento.js"></script>
 </svelte:head>
 
 {#each post as post}
@@ -85,5 +86,8 @@
         {@html post.Body} </div>
 
 {/each}
+
+<h2>Eure Kommentare</h2>
+<div id="commento"></div>
 
 <p>⇺<a href="chapters"> back to chapters</a></p>
