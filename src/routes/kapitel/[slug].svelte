@@ -29,6 +29,7 @@
 
 <script>
         export let post;
+        let david = 12
 </script>
 
 <style>
@@ -79,7 +80,9 @@
 
 </style>
 <svelte:head>
-        <title>Adults in the Zoom</title>
+        {#each post as post}
+        <title>{post.Title} </title>
+        {/each}
         <script defer src="https://cdn.commento.io/js/commento.js"></script>
 </svelte:head>
 

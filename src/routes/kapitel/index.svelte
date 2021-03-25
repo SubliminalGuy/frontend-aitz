@@ -41,7 +41,7 @@
 </style>
 
 <svelte:head>
-    <title>articles</title>
+    <title>Kapitel: Adults in the Zoom</title>
 </svelte:head>
 
 <h1>Kapitelübersicht</h1>
@@ -49,7 +49,7 @@
 <ul>
 {#each posts as post}
 <li>
-      <a class="main-title" rel='prefetch' href='chapters/{post.Slug}'>
+      <a class="main-title" rel='prefetch' href='kapitel/{post.Slug}'>
         {post.Title}
       </a>
 </li>

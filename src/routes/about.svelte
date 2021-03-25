@@ -1,5 +1,5 @@
 <svelte:head>
-        <title>about</title>
+        <title>About: Adults in the Zoom</title>
 </svelte:head>
 
 <h1>Über <strong>Adults in the Zoom</strong></h1>
