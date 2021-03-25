@@ -99,4 +99,4 @@
 <h4>Eure Kommentare</h4>
 <div id="commento"></div>
 
-<p>⇺<a href="chapters"> back to chapters</a></p>
+<p>⇺<a href="kapitel">zur kapitelübersicht</a></p>
