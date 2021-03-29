@@ -25,6 +25,7 @@
                 })
                 return {post: results.data.blogs}
         }
+
 </script>
 
 <script>
@@ -87,6 +88,13 @@
         .zero-margin {
                 margin: 0;
         }
+        .tweet-button {
+                padding: 0.5rem 0.9rem;
+                background-color: #1da1f2;
+                color: white;
+                text-decoration: none;
+                font-weight: 600;
+        }
 
 
 </style>
@@ -109,13 +117,10 @@
         <div class="social-stuff">
                 <h4 class="zero-margin">Eure Kommentare</h4>
                 
-                <a href="https://twitter.com/intent/tweet?&ref_src=twsrc%5Etfw" 
-                        target="_blank" 
-                        class="twitter-share-button" 
-                        data-size="large" 
-                        data-text={post.Description}
-                        data-hashtags="adultsinthezoom,diem25"
-                        data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <a href="https://twitter.com/intent/tweet?hashtags=adultsinthezoom,diem25&text={post.Description}&url=http://adults-in-the-zoom.de/kapitel/{post.Slug}"
+                        target="_blank"
+                        class="tweet-button">
+                        tweet me softly</a>
         </div>
 {/each}
 
