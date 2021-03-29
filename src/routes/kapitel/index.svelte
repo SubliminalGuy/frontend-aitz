@@ -61,4 +61,4 @@
 </p>
 {/each}
 </ul>
-<h2 class="next">Das nächste Kapitel wird am 1. April 2020 veröffentlicht.</h2>
+<h2 class="next">Das nächste Kapitel wird am 1. April 2021 veröffentlicht.</h2>
