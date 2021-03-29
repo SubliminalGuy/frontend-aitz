@@ -31,13 +31,16 @@
 </script>
 
 <style>
-    ul, p {
-            margin: 0 0 1em 0;
-            line-height: 1.5;
-    }
-    .main-title {
-            font-size: 25px;
-    }
+        ul, p {
+                margin: 0 0 1em 0;
+                line-height: 1.5;
+        }
+        .main-title {
+                font-size: 25px;
+        }
+        .next {
+                margin-top: 2rem;
+        }
 </style>
 
 <svelte:head>
@@ -58,3 +61,4 @@
 </p>
 {/each}
 </ul>
+<h2 class="next">Das nächste Kapitel wird am 1. April 2020 veröffentlicht.</h2>

@@ -76,6 +76,17 @@
         .content :global(li) {
                 margin: 0 0 0.5em 0;
         }
+        .social-stuff {
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                align-items: flex-end;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+        }
+        .zero-margin {
+                margin: 0;
+        }
 
 
 </style>
@@ -94,9 +105,21 @@
         <div class='content'>
         {@html post.Body} </div>
 
+
+        <div class="social-stuff">
+                <h4 class="zero-margin">Eure Kommentare</h4>
+                
+                <a href="https://twitter.com/intent/tweet?&ref_src=twsrc%5Etfw" 
+                        target="_blank" 
+                        class="twitter-share-button" 
+                        data-size="large" 
+                        data-text={post.Description}
+                        data-hashtags="adultsinthezoom,diem25"
+                        data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
 {/each}
 
-<h4>Eure Kommentare</h4>
+
 <div id="commento"></div>
 
 <p>⇺<a href="kapitel">zur kapitelübersicht</a></p>
