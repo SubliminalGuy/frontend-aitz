@@ -56,6 +56,7 @@
 		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
 		     the blog data when we hover over the link or tap it on a touchscreen -->
 		<li><a rel=prefetch aria-current="{segment === 'kapitel' ? 'page' : undefined}" href="/kapitel">kapitel</a></li>
+		<li><a aria-current="{segment === 'newsletter' ? 'page' : undefined}" href="/newsletter">newsletter</a></li>
 		<li><a aria-current="{segment === 'impressum' ? 'page' : undefined}" href="/impressum">impressum</a></li>
 		<li><a aria-current="{segment === 'datenschutz' ? 'page' : undefined}" href="/datenschutz">datenschutz</a></li>
 	</ul>
