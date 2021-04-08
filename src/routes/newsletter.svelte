@@ -26,7 +26,7 @@ const { form, errors, state, handleChange, handleSubmit } = createForm({
             };
 
         // emailjs Integration //
-/*
+
         emailjs.init('user_XLGdRxnG7S4GCsE5MnYZN');
                     
         emailjs.send('posteo.de','contact_form', templateParams)
@@ -35,7 +35,7 @@ const { form, errors, state, handleChange, handleSubmit } = createForm({
                 }, function(err) {
                 console.log('FAILED...', err);
                 });
-                */
+                
         nativeToast({
             message: `Danke, ${values.name}! \u{1F388} \u{1F381}`,
             position: 'center',
