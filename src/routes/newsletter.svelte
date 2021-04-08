@@ -1,24 +1,22 @@
 <script>
-import { from } from 'apollo-link';
-
 import emailjs from 'emailjs-com';
 import { createForm } from 'svelte-forms-lib'
+import * as yup from 'yup'
+import nativeToast from 'native-toast'
 
 const { form, errors, state, handleChange, handleSubmit } = createForm({
     initialValues: {
         name: "",
         email: ""
     },
-    validate: values => {
-    let errs = {};
-    if (values.name == "") {
-        errs["name"] = "Verrat mir doch deinen Namen oder Spitznamen \u{1F607}";
-    }
-    if (values.email == "") {
-        errs["email"] = "Was ist ein Newsletter ohne gültige eMail? \u{1F48C}"
-    }
-    return errs;
-    },
+    validationSchema: yup.object().shape({
+        name: yup.string().required().min(3),
+        email: yup
+                .string()
+                .email()
+                .required()
+
+    }),
 
     onSubmit: values => {
         //console.log(values)
@@ -28,7 +26,7 @@ const { form, errors, state, handleChange, handleSubmit } = createForm({
             };
 
         // emailjs Integration //
-
+/*
         emailjs.init('user_XLGdRxnG7S4GCsE5MnYZN');
                     
         emailjs.send('posteo.de','contact_form', templateParams)
@@ -37,7 +35,22 @@ const { form, errors, state, handleChange, handleSubmit } = createForm({
                 }, function(err) {
                 console.log('FAILED...', err);
                 });
-                
+                */
+        nativeToast({
+            message: `Danke, ${values.name}! \u{1F388} \u{1F381}`,
+            position: 'center',
+            timeout: 3500,
+            type: 'success'
+        })
+
+        // Redirect
+
+        const delay = 4000; // time in milliseconds
+
+        setTimeout(function(){
+        window.location = "/";
+        },delay);
+        
     }
 })
 
@@ -52,20 +65,20 @@ const { form, errors, state, handleChange, handleSubmit } = createForm({
 <h1>Deine wöchentliche Erinnerung!</h1>
 
 
-<p>Wenn du bei Adults in the <strong>Zoom</strong> am Ball bleiben willst, dann kannst du dich hier 
+<p>Wenn du bei <strong>Adults in the Zoom</strong> am Ball bleiben willst, dann kannst du dich hier 
     für den wöchentlichen eMail-Reminder anmelden.</p>
 
 <form class="inputwrap" on:submit={handleSubmit}>
     <div class="input-container">
-        <input id="name" name="name" placeholder="Dein Name" on:change={handleChange} bind:value={form.name} />
+        <input id="name" name="name" placeholder="Dein Name" on:blur={handleChange} on:change={handleChange} bind:value={form.name} />
         {#if $errors.name}
-        <small>{$errors.name}</small>
+        <small>Verrat uns doch deinen Namen &#x1F64F;</small>
         {/if}
     </div> 
     <div class="input-container">
-        <input id="email" name="email" placeholder="eMail" on:change={handleChange} bind:value={form.email} />
+        <input id="email" name="email" placeholder="eMail" on:blur={handleChange}  on:change={handleChange} bind:value={form.email} />
         {#if $errors.email}
-        <small>{$errors.email}</small>
+        <small>Ist das wirklich ein eMail-Adresse? &#x1F48C;</small>
         {/if}
     </div> 
     <div class="button-container">
@@ -106,7 +119,7 @@ strong {
 }
 
 input {
-    width: 90%;
+    width: 60%;
     height: 2rem;
     margin: 10px 10px 0 0;
     padding: 4px;
@@ -116,17 +129,20 @@ input {
 
 small {
     margin-top: 0.5rem;
+    font-size: 0.9rem
 }
 
-/*
-.badinput {
-    border: 2px black solid;
+@media screen and (max-width: 800px) {
+    input {
+    width: 100%;
+    }
+
+    .inputwrap {
+    width: 80vw;
 }
 
-.ok {
-    border: 2px #34D399 solid;
 }
-*/
+
 .tweet-button {
     padding: 0.5rem 0.9rem;
     background-color: #1da1f2;
