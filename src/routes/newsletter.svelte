@@ -35,7 +35,8 @@ const { form, errors, state, handleChange, handleSubmit } = createForm({
                 }, function(err) {
                 console.log('FAILED...', err);
                 });
-                
+        // Throws out a Thank you Box!
+        
         nativeToast({
             message: `Danke, ${values.name}! \u{1F388} \u{1F381}`,
             position: 'center',
@@ -78,7 +79,7 @@ const { form, errors, state, handleChange, handleSubmit } = createForm({
     <div class="input-container">
         <input id="email" name="email" placeholder="eMail" on:blur={handleChange}  on:change={handleChange} bind:value={form.email} />
         {#if $errors.email}
-        <small>Ist das wirklich ein eMail-Adresse? &#x1F48C;</small>
+        <small>Ist das wirklich eine eMail-Adresse? &#x1F48C;</small>
         {/if}
     </div> 
     <div class="button-container">
@@ -129,7 +130,8 @@ input {
 
 small {
     margin-top: 0.5rem;
-    font-size: 0.9rem
+    font-size: 0.9rem;
+    width: 100%;
 }
 
 @media screen and (max-width: 800px) {

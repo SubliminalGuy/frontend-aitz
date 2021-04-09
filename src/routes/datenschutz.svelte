@@ -95,7 +95,12 @@
 <h2>commento.io</h2>
 <p>Diese Seite nutzt zur Aufnahmen und Verarbeitung von Kommentaren das Plugin <a href="https://commento.io/" target="_blank">commento.io</a>.</p>
 <p>Zu diesem Zweck muss der von Ihnen verwendete Browser Verbindung zu den Servern von commento.io aufnehmen. Hierdurch erlangt der Anbieter Kenntnis darüber, dass über Ihre IP-Adresse diese Website aufgerufen wurde.</p>
-<p>Weitere Informationen zu commento.io finden Sie <a href="https://commento.io/legal">hier</a>.</p>
+<p>Weitere Informationen zu commento.io finden Sie <a href="https://commento.io/legal" target="_blank">hier</a>.</p>
+<h2>emailjs.com</h2>
+<p>Diese Seite nutzt zum Verwalten des Newsletters und zur Speicherung der damit verbundenen Nutzerdaten (eMail-Adresse, Nutzernamen) das Plugin <a href="https://emailjs.com/" target="_blank">emailjs.com</a>.</p>
+<p>Zu diesem Zweck muss der von Ihnen verwendete Browser Verbindung zu den Servern von emailjs.com aufnehmen. Hierdurch erlangt der Anbieter Kenntnis darüber, dass über Ihre IP-Adresse diese Website aufgerufen wurde und speichert die
+        übermittelte eMail-Adresse in Verbindung mit dem angegebenen Namen.</p>
+<p>Weitere Informationen zu email.js finden Sie <a href="https://emailjs.com/legal/privacy-policy" target="_blank">hier</a>.</p>
 <style>
 
         
