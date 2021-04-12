@@ -19,10 +19,10 @@
 			padding-bottom: 1em;
 			font-size: 1.5rem;
 	}
-	@media (min-width: 480px) {
-			h1 {
-					font-size: 4em;
-			}
+	@media (min-width: 600px) {
+		h1 {
+			font-size: 4em;
+		}
 	}
 </style>
 

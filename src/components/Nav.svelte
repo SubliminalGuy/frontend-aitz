@@ -1,5 +1,17 @@
 <script>
+	import { modalClicked } from '../stores'
 	export let segment;
+
+	function switchModal() {
+		modalClicked.update(value => !value)
+	}
+
+	function turnOffModal() {
+		setTimeout(function(){
+			modalClicked.update(value => false)
+        }, 600);
+		
+	}
 </script>
 
 <style>
@@ -7,11 +19,13 @@
 		border-bottom: 1px solid rgba(255,62,0,0.1);
 		font-weight: 300;
 		padding: 0 1em;
+		
 	}
 
 	ul {
 		margin: 0;
 		padding: 0;
+		
 	}
 
 	/* clearfix */
@@ -20,6 +34,7 @@
 		display: block;
 		clear: both;
 	}
+
 
 	li {
 		display: block;
@@ -46,18 +61,48 @@
 		padding: 1em 0.5em;
 		display: block;
 	}
+
+	.large-screen {
+		display: block;
+	}
+
+	.small-screen {
+		display: none;
+	}
+
+	svg {
+		width: 2rem;
+		padding: 1em 0.5em;
+	}
+
+
+	@media (max-width: 600px) {
+		.large-screen {
+			display: none;
+		}
+
+		.small-screen {
+			display: block;
+		}
+	
+	}
+
+	
 </style>
 
 <nav>
-	<ul>
-		<li><a aria-current="{segment === undefined ? 'page' : undefined}" href="/">home</a></li>
-		<li><a aria-current="{segment === 'about' ? 'page' : undefined}" href="/about">about</a></li>
+	<ul class="large-screen">
+		<li><a on:click={turnOffModal} aria-current="{segment === undefined ? 'page' : undefined}" href="/">home</a></li>
+		<li><a on:click={turnOffModal} aria-current="{segment === 'about' ? 'page' : undefined}" href="/about">about</a></li>
 
 		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
 		     the blog data when we hover over the link or tap it on a touchscreen -->
-		<li><a rel=prefetch aria-current="{segment === 'kapitel' ? 'page' : undefined}" href="/kapitel">kapitel</a></li>
-		<li><a aria-current="{segment === 'newsletter' ? 'page' : undefined}" href="/newsletter">newsletter</a></li>
-		<li><a aria-current="{segment === 'impressum' ? 'page' : undefined}" href="/impressum">impressum</a></li>
-		<li><a aria-current="{segment === 'datenschutz' ? 'page' : undefined}" href="/datenschutz">datenschutz</a></li>
+		<li><a on:click={turnOffModal} rel=prefetch aria-current="{segment === 'kapitel' ? 'page' : undefined}" href="/kapitel">kapitel</a></li>
+		<li><a on:click={turnOffModal} aria-current="{segment === 'newsletter' ? 'page' : undefined}" href="/newsletter">newsletter</a></li>
+		<li><a on:click={turnOffModal} aria-current="{segment === 'impressum' ? 'page' : undefined}" href="/impressum">impressum</a></li>
+		<li><a on:click={turnOffModal} aria-current="{segment === 'datenschutz' ? 'page' : undefined}" href="/datenschutz">datenschutz</a></li>
+	</ul>
+	<ul class="small-screen">
+		<svg on:click={switchModal} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"></path></svg>
 	</ul>
 </nav>
