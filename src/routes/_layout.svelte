@@ -37,25 +37,19 @@
 		height: 100%;
 		background-color: black;
 		margin: 0;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
 	}
 
-	.link-list {
-		margin: 0;
-		list-style: none;
-	}
 
-	li {
+	.b-link {
 		margin: 0;
 		clear: both;
 		width: 100%;
 		margin-bottom: 2rem;
+		display: inline-block;
 		text-align: center;
 	}
 
-	li:first-of-type {
+	.b-link:first-of-type {
 		margin-top: 5rem;
 	}
 
@@ -77,13 +71,11 @@
 	</main>
 	{:else}
 	<div class="modal">
-		<ul class="link-list">
-			<li><a on:click={switchModal} href="/">home</a></li>
-			<li><a on:click={switchModal} href="/about">about</a></li>
-			<li><a on:click={switchModal} href="/kapitel">kapitel</a></li>
-			<li><a on:click={switchModal} href="/newsletter">newsletter</a></li>
-			<li><a on:click={switchModal} href="/impressum">impressum</a></li>
-			<li><a on:click={switchModal} href="/datenschutz">datenschutz</a></li>
-		</ul>
+		<div class="b-link"><a on:click={switchModal} href="/">home</a></div>
+		<div class="b-link"><a on:click={switchModal} href="/about">about</a></div>
+		<div class="b-link"><a on:click={switchModal} href="/kapitel">kapitel</a></div>
+		<div class="b-link"><a on:click={switchModal} href="/newsletter">newsletter</a></div>
+		<div class="b-link"><a on:click={switchModal} href="/impressum">impressum</a></div>
+		<div class="b-link" ><a on:click={switchModal} href="/datenschutz">datenschutz</a></div>
 	</div>
 	{/if}
