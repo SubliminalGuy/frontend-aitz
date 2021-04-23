@@ -1,6 +1,7 @@
 <script context="module">
         import ApolloClient, { gql } from 'apollo-boost';  
         import moment from 'moment';
+        import Chapters from '../../components/Chapters.svelte';
 
         const blogQuery = gql`
         query Blogs {  
@@ -24,24 +25,21 @@
                 })
                 return {posts: results.data.blogs}
         }
+
+        
 </script>
 
 <script>
+        
+//import { isTypeSystemDefinitionNode } from 'graphql';
+
         export let posts;
+        $: zeroPosts = posts.slice(0,2)
+        $: onePosts = posts.slice(2,6)
+        $: twoPosts = posts.slice(6)
 </script>
 
-<style>
-        ul, p {
-                margin: 0 0 1em 0;
-                line-height: 1.5;
-        }
-        .main-title {
-                font-size: 25px;
-        }
-        .next {
-                margin-top: 2rem;
-        }
-</style>
+
 
 <svelte:head>
         <title>Kapitel: Adults in the Zoom</title>
@@ -49,16 +47,26 @@
 
 <h1>Kapitelübersicht</h1>
 
-<ul>
-{#each posts as post}
-<li>
-        <a class="main-title" rel='prefetch' href='kapitel/{post.Slug}'>
-        {post.Title}
-        </a>
-</li>
-<p> 
-{moment().to(post.Published, "DD-MM-YYYY")} ago by Subliminal_Guy 
-</p>
-{/each}
-</ul>
+<h2 class="chapter-mark">0. Prolog</h2>
+        <Chapters subchapters={zeroPosts}/>
+
+<h2 class="chapter-mark">1. Erstkontakt</h2>
+        <Chapters subchapters={onePosts}/>
+
+<h2 class="chapter-mark">2. Europäischer Frühling</h2>
+        <Chapters subchapters={twoPosts}/>
+
 <h2 class="next">Das nächste Kapitel wird am 29. April 2021 veröffentlicht.</h2>
+
+
+
+<style>      
+        .next {
+                margin-top: 2rem;
+        }
+
+        .chapter-mark {
+                color: rgb(240,25,45);
+                margin: 1em
+        }
+</style>
