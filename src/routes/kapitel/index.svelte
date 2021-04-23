@@ -50,7 +50,7 @@
 <h2 class="chapter-mark">0. Prolog</h2>
         <Chapters subchapters={zeroPosts}/>
 
-<h2 class="chapter-mark">1. Erstkontakt</h2>
+<h2 class="chapter-mark">1. DiEM25 für Anfänger*innen</h2>
         <Chapters subchapters={onePosts}/>
 
 <h2 class="chapter-mark">2. Europäischer Frühling</h2>
