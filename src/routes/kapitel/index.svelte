@@ -1,6 +1,5 @@
 <script context="module">
         import ApolloClient, { gql } from 'apollo-boost';  
-        import moment from 'moment';
         import Chapters from '../../components/Chapters.svelte';
 
         const blogQuery = gql`
@@ -63,10 +62,24 @@
 <style>      
         .next {
                 margin-top: 2rem;
+                font-size: 1.6rem
         }
 
         .chapter-mark {
                 color: rgb(240,25,45);
                 margin: 1em
         }
+
+        h2 {
+                font-size: 1.8rem;
+        }
+
+        @media (max-width: 600px) {
+		h2 {
+		        font-size: 1.6em;
+		}
+                .next {
+                        font-size: 1.2rem  
+                }
+	}
 </style>
