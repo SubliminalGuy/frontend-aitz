@@ -16,7 +16,7 @@
         `;
         export async function preload({params, query}) {
                 const client = new ApolloClient({ 
-                        uri: 'http://bookend-aitz.herokuapp.com/graphql',
+                        uri: 'https://bookend-aitz.herokuapp.com/graphql',
                         fetch: this.fetch
                         });
                 const results = await client.query({
