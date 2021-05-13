@@ -55,7 +55,7 @@
 <h2 class="chapter-mark">2. Europäischer Frühling</h2>
         <Chapters subchapters={twoPosts}/>
 
-<h2 class="next">Das nächste Kapitel wird am 13. Mai 2021 veröffentlicht.</h2>
+<h2 class="next">Das nächste Kapitel wird am 20. Mai 2021 veröffentlicht.</h2>
 
 
 
