@@ -102,7 +102,6 @@
         {#each post as post}
         <title>{post.Title} </title>
         {/each}
-        <script defer src="https://cdn.commento.io/js/commento.js"></script>
 </svelte:head>
 
 {#each post as post}
@@ -125,6 +124,6 @@
 {/each}
 
 
-<div id="commento"></div>
+<div class="comment-section"></div>
 
 <p>⇺<a href="kapitel">zur kapitelübersicht</a></p>

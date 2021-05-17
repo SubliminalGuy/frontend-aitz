@@ -1,6 +1,7 @@
 <script context="module">
         import ApolloClient, { gql } from 'apollo-boost';  
         import Chapters from '../../components/Chapters.svelte';
+        import supabase from '../../utils/supabaseCreator'
 
         const blogQuery = gql`
         query Blogs {  
@@ -23,7 +24,16 @@
                         query: blogQuery
                 })
                 return {posts: results.data.blogs}
+        };
+         // Make a supabaserequest
+        export async function getComments() {
+                let { data: comments, error } = await supabase
+                        .from('comments')
+                        .select('*')
+                        return comments
         }
+
+
 
         
 </script>
@@ -31,12 +41,14 @@
 <script>
         
 //import { isTypeSystemDefinitionNode } from 'graphql';
-
+        export let comments;
         export let posts;
         $: zeroPosts = posts.slice(0,2)
         $: onePosts = posts.slice(2,6)
         $: twoPosts = posts.slice(6, 13)
 //      $: threePosts = post.slice(13)
+
+        console.log(comments)
 </script>
 
 

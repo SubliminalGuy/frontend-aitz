@@ -9,6 +9,7 @@
     "start": "node __sapper__/build"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^1.11.13",
     "apollo-boost": "^0.4.9",
     "compression": "^1.7.1",
     "emailjs-com": "^2.6.4",
