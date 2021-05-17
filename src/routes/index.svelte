@@ -20,9 +20,7 @@
 			font-size: 1.5rem;
 	}
 
-	.redish {
-		color: rgb(240,25,45)
-	}
+	
 
 	@media (min-width: 600px) {
 		h1 {

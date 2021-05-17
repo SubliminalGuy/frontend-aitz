@@ -1,14 +1,22 @@
 <script>
 	import Nav from '../components/Nav.svelte';
 	import { modalClicked } from '../stores'
-
+	import { userComments } from '../stores'
+	import { onMount } from 'svelte'
+	import { createClient } from '@supabase/supabase-js'
 	export let segment;
 
 	let modalFired;
 	
+	
 	const unsubscribe = modalClicked.subscribe(value => {
 		modalFired = value;
 	})
+
+	const supabase = createClient(
+			"https://uibbkatwgyqootsrapta.supabase.co",
+			"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTYyMTE4NjcxNSwiZXhwIjoxOTM2NzYyNzE1fQ.oL8U2Ak9a_51iJgjHk-9ZAXLsOJHoBnnMSdq0KxiDPI"
+        );
 
 	function switchModal() {
 		setTimeout(function(){
@@ -17,7 +25,14 @@
         
     }
 
-
+	// Make a supabaserequest
+	onMount( async function getComments() {
+                let { data: comments, error } = await supabase
+                        .from('Comments')
+                        .select('*')
+                        userComments.set(comments)
+                } )
+	
 
 </script>
 
