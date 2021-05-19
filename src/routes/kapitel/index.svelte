@@ -39,7 +39,7 @@
         $: zeroPosts = posts.slice(0,2)
         $: onePosts = posts.slice(2,6)
         $: twoPosts = posts.slice(6, 13)
-//      $: threePosts = post.slice(13)
+        $: threePosts = posts.slice(13)
 
         
 </script>
@@ -60,11 +60,11 @@
 
 <h2 class="chapter-mark">2. Europäischer Frühling</h2>
         <Chapters subchapters={twoPosts}/>
-<!--
-<h2 class="chapter-mark">3. Im Bundeskollektiv</h2>
-        <Chapters subchapters={threePosts}/>-->
 
-<h2 class="next">Das nächste Kapitel wird am 20. Mai 2021 veröffentlicht.</h2>
+<h2 class="chapter-mark">3. Im Bundeskollektiv</h2>
+        <Chapters subchapters={threePosts}/>
+
+<h2 class="next">Das nächste Kapitel wird am 27. Mai 2021 veröffentlicht.</h2>
 
 
 
@@ -85,10 +85,10 @@
 
         @media (max-width: 600px) {
 		h2 {
-		        font-size: 1.6em;
+                font-size: 1.6em;
 		}
                 .next {
-                        font-size: 1.2rem  
+                font-size: 1.2rem  
                 }
 	}
 </style>

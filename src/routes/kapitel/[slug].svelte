@@ -36,6 +36,8 @@
         import { userComments } from '../../stores'
         import { createClient } from '@supabase/supabase-js'
         import nativeToast from 'native-toast'
+        import emailjs from 'emailjs-com';
+
         export let post;
         let user_comments;
         let username = "";
@@ -47,6 +49,24 @@
                 
                 insertComment(post[0].Slug, username, userText)
                 //getComments()
+
+                // emailjs Integration //
+
+                let templateParams = {
+                        name: username,
+                        message: userText
+                };
+
+                emailjs.init('user_XLGdRxnG7S4GCsE5MnYZN');
+
+                emailjs.send('posteo.de','template_186mnbe', templateParams)
+                        .then(function(response) {
+                        console.log('SUCCESS!', response.status, response.text)
+                        }, function(err) {
+                        console.log('FAILED...', err);
+                        });
+
+
                 nativeToast({
                         message: `Danke, ${username}! \u{1F388} \u{1F381}`,
                         position: 'center',
