@@ -46,7 +46,7 @@
         function sendText() {
                 
                 insertComment(post[0].Slug, username, userText)
-                getComments()
+                //getComments()
                 nativeToast({
                         message: `Danke, ${username}! \u{1F388} \u{1F381}`,
                         position: 'center',
@@ -85,14 +85,14 @@
                         markdown}
                         ])
         }
-
+/*
         async function getComments() {
                 let { data: comments, error } = await supabase
                         .from('Comments')
                         .select('*')
                         userComments.set(comments)
         } 
-
+*/
 </script>
 
 
