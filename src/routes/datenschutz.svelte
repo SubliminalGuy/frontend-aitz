@@ -92,10 +92,10 @@
 <p>Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen.</p>
 <p>Die Erfassung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Der Websitebetreiber hat ein berechtigtes Interesse an der technisch fehlerfreien Darstellung und der Optimierung seiner Website – hierzu müssen die Server-Log-Files erfasst werden.</p>
 <h2>5. Plugins und Tools</h2>
-<h2>commento.io</h2>
-<p>Diese Seite nutzt zur Aufnahmen und Verarbeitung von Kommentaren das Plugin <a href="https://commento.io/" target="_blank">commento.io</a>.</p>
-<p>Zu diesem Zweck muss der von Ihnen verwendete Browser Verbindung zu den Servern von commento.io aufnehmen. Hierdurch erlangt der Anbieter Kenntnis darüber, dass über Ihre IP-Adresse diese Website aufgerufen wurde.</p>
-<p>Weitere Informationen zu commento.io finden Sie <a href="https://commento.io/legal" target="_blank">hier</a>.</p>
+<h2>supabase.io</h2>
+<p>Diese Seite nutzt zur Aufnahmen und Verarbeitung von Kommentaren den Datenbank-Service <a href="https://supabase.io/" target="_blank">supabase.io</a>.</p>
+<p>Zu diesem Zweck werden der eingegebene Nutzername und der Kommentartext an die Server von supabase.io übermittelt.</p>
+<p>Weitere Informationen zu supabase.io finden Sie <a href="https://supabase.io/docs/company/terms" target="_blank">hier</a>.</p>
 <h2>emailjs.com</h2>
 <p>Diese Seite nutzt zum Verwalten des Newsletters und zur Speicherung der damit verbundenen Nutzerdaten (eMail-Adresse, Nutzernamen) das Plugin <a href="https://emailjs.com/" target="_blank">emailjs.com</a>.</p>
 <p>Zu diesem Zweck muss der von Ihnen verwendete Browser Verbindung zu den Servern von emailjs.com aufnehmen. Hierdurch erlangt der Anbieter Kenntnis darüber, dass über Ihre IP-Adresse diese Website aufgerufen wurde und speichert die
