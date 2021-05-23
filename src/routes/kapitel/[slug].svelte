@@ -54,7 +54,8 @@
 
                 let templateParams = {
                         name: username,
-                        message: userText
+                        message: userText,
+                        slug: post[0].Slug
                 };
 
                 emailjs.init('user_XLGdRxnG7S4GCsE5MnYZN');
