@@ -64,7 +64,7 @@
 <h2 class="chapter-mark">3. Im Bundeskollektiv</h2>
         <Chapters subchapters={threePosts}/>
 
-<h2 class="next">Das nächste Kapitel wird am 27. Mai 2021 veröffentlicht.</h2>
+<h2 class="next">Das nächste Kapitel wird am 3. Juni 2021 veröffentlicht.</h2>
 
 
 
