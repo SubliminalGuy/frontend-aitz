@@ -39,8 +39,8 @@
         $: zeroPosts = posts.slice(0,2)
         $: onePosts = posts.slice(2,6)
         $: twoPosts = posts.slice(6, 13)
-        $: threePosts = posts.slice(13)
-
+        $: threePosts = posts.slice(13, 17)
+        $: fourPosts = posts.slice(17)
         
 </script>
 
@@ -64,7 +64,10 @@
 <h2 class="chapter-mark">3. Im Bundeskollektiv</h2>
         <Chapters subchapters={threePosts}/>
 
-<h2 class="next">Das nächste Kapitel wird am 17. Juni 2021 veröffentlicht.</h2>
+<h2 class="chapter-mark">4. DiEM25 but better?</h2>
+        <Chapters subchapters={fourPosts}/>
+
+<h2 class="next">Das nächste Kapitel wird am 24. Juni 2021 veröffentlicht.</h2>
 
 
 
