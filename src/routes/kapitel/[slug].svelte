@@ -240,6 +240,11 @@
                 font-size: 0.9rem;
         }
 
+        button {
+                border: none;
+                margin-left: 15px;
+        }
+
         img {
                 width: 50px;
                 height: 50px;

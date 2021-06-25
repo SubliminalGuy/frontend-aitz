@@ -67,7 +67,7 @@
 <h2 class="chapter-mark">4. DiEM25 but better?</h2>
         <Chapters subchapters={fourPosts}/>
 
-<h2 class="next">Das nächste Kapitel wird am 24. Juni 2021 veröffentlicht.</h2>
+<h2 class="next">Das nächste Kapitel wird am 1. Juli 2021 veröffentlicht.</h2>
 
 
 
