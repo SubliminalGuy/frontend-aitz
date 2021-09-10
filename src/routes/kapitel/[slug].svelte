@@ -2,9 +2,21 @@
         import ApolloClient, { gql } from 'apollo-boost';  
         import moment from 'moment';
         
-
-
         const blogQuery = gql`
+        query Blogs {  
+                blogs {
+                        id
+                        Title
+                        Description
+                        Published
+                        Body
+                        Slug
+                }
+        }
+        `;
+
+
+        const chapterQuery = gql`
         query Blogs($Slug: String!) {
                 blogs: blogs(where: { Slug: $Slug }) {
                         id
@@ -22,14 +34,17 @@
                         fetch: this.fetch
                         });
                 const results = await client.query({
-                        query: blogQuery,
+                        query: chapterQuery,
                         variables: {"Slug" : params.slug} 
                 })
-                return {post: results.data.blogs}
+                const resultsBlog = await client.query({
+                        query: blogQuery,
+                })
+                return {post: results.data.blogs, posts: resultsBlog.data.blogs, slug: params.slug }
         }
 
         
-
+        
 </script>
 
 <script>
@@ -37,12 +52,20 @@
         import { createClient } from '@supabase/supabase-js'
         import nativeToast from 'native-toast'
         import emailjs from 'emailjs-com';
+        import { isTypeSystemDefinitionNode } from 'graphql';
+
 
         export let post;
         let user_comments;
         let username = "";
         let userText = ""
 
+
+        export let posts;
+        export let slug;
+        $: slugIndex = posts.findIndex(item => item.Slug == slug)
+        $: previousSlug = posts[slugIndex-1] ? posts[slugIndex-1].Slug : "nada"
+        $: nextSlug = posts[slugIndex+1] ? posts[slugIndex+1].Slug : "nada"
         //let site_comments = user_comments 
 
         function sendText() {
@@ -162,10 +185,14 @@
         </form>
 
 </div>
-
-<p class="redish">&#x2B05; <a href="kapitel">Zur Kapitelübersicht</a></p> 
-
-
+<div class="navi">
+{#if previousSlug != "nada"}
+        <p class="redish left">←<a rel="prefetch" href='kapitel/{previousSlug}'>Vorheriges Kapitel</a></p> 
+{/if}
+{#if nextSlug != "nada"}
+        <p class="redish right"><a rel='prefetch' href='kapitel/{nextSlug}'>Nächstes Kapitel</a> →</p> 
+{/if}
+</div>
 <style>
 
         .content {
@@ -280,5 +307,13 @@
                 padding: 5px;
                 padding-left: 15px;
         }
+
+        .navi {
+	display: flex;
+	flex-wrap: wrap;
+        justify-content: space-between;
+        }
+
+        
 
 </style>

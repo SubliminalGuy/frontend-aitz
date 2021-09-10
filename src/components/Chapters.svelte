@@ -1,12 +1,13 @@
 <script>
     import moment from 'moment';
     export let subchapters
+
 </script>
 
 <ul>
     {#each subchapters as post}
     <li>
-            <a class="main-title" rel='prefetch' href='kapitel/{post.Slug}'>
+            <a class="main-title" rel='prefetch' href='kapitel/{post.Slug}' >
             {post.Title}
             </a>
     </li>
@@ -27,7 +28,7 @@
     }
     @media (max-width: 600px) {
 		.main-title {
-		        font-size: 1.4em;
+		font-size: 1.4em;
 		}
 	}
 </style>
