@@ -52,6 +52,7 @@
         import { createClient } from '@supabase/supabase-js'
         import nativeToast from 'native-toast'
         import emailjs from 'emailjs-com';
+        import { beforeUpdate } from 'svelte'
         //import { isTypeSystemDefinitionNode } from 'graphql';
 
 
@@ -113,8 +114,8 @@
         );
         
 
-        const unsubscribe = userComments.subscribe(value => {
-                        user_comments = value.filter(el => el.url == post[0].Slug);
+        userComments.subscribe(value => {
+                user_comments = value.filter(el => el.url == post[0].Slug);
                 });
         
         
@@ -129,14 +130,14 @@
                         markdown}
                         ])
         }
-/*
-        async function getComments() {
+        // Loads new comment after every update
+        beforeUpdate(async function getComments() {
                 let { data: comments, error } = await supabase
                         .from('Comments')
                         .select('*')
                         userComments.set(comments)
-        } 
-*/
+        } );
+
 </script>
 
 
