@@ -1,6 +1,6 @@
 <script context="module">
         import ApolloClient, { gql } from 'apollo-boost';  
-import { isTypeSystemDefinitionNode } from 'graphql';
+        //import { isTypeSystemDefinitionNode } from 'graphql';   
         import Chapters from '../../components/Chapters.svelte';
         
         
