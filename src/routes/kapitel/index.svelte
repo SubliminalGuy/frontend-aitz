@@ -72,7 +72,7 @@
 <h2 class="chapter-mark">5. Die Lokalgruppe</h2>
         <Chapters subchapters={fivePosts}/>
 
-<h2 class="next">Das nächste Kapitel wird am 23. September 2021 veröffentlicht.</h2>
+<h2 class="next">Das nächste Kapitel wird am 7.Oktober 2021 veröffentlicht.</h2>
 
 
 
