@@ -76,7 +76,7 @@
 <h2 class="chapter-mark">6. Politische Ökosysteme</h2>
 <Chapters subchapters={sixPosts}/>
 
-<h2 class="next">Das nächste Kapitel wird am 14. Oktober 2021 veröffentlicht.</h2>
+<h2 class="next">Das nächste Kapitel wird am 21. Oktober 2021 veröffentlicht.</h2>
 
 
 
