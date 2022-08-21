@@ -68,11 +68,6 @@
 <Chapters subchapters={sixPosts} />
 
 <style>
-  .next {
-    margin-top: 2rem;
-    font-size: 1.6rem;
-  }
-
   .chapter-mark {
     color: rgb(240, 25, 45);
     margin: 1em;
@@ -85,9 +80,6 @@
   @media (max-width: 600px) {
     h2 {
       font-size: 1.6em;
-    }
-    .next {
-      font-size: 1.2rem;
     }
   }
 </style>
