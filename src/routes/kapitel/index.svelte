@@ -1,43 +1,24 @@
 <script context="module">
-  import ApolloClient, { gql } from "apollo-boost";
-  //import { isTypeSystemDefinitionNode } from 'graphql';
   import Chapters from "../../components/Chapters.svelte";
-
-  const blogQuery = gql`
-    query Blogs {
-      blogs {
-        id
-        Title
-        Description
-        Published
-        Body
-        Slug
-      }
-    }
-  `;
-  export async function preload({ params, query }) {
-    const client = new ApolloClient({
-      uri: "https://bookend-aitz.herokuapp.com/graphql",
-      fetch: this.fetch,
-    });
-    const results = await client.query({
-      query: blogQuery,
-    });
-    return { posts: results.data.blogs };
-  }
+  import { supaBlogPosts } from "../../stores";
 </script>
 
 <script>
   //import { isTypeSystemDefinitionNode } from 'graphql';
-  export let posts;
+  //export let posts;
+  export let supa_blog_posts;
 
-  $: zeroPosts = posts.slice(0, 2);
-  $: onePosts = posts.slice(2, 6);
-  $: twoPosts = posts.slice(6, 13);
-  $: threePosts = posts.slice(13, 17);
-  $: fourPosts = posts.slice(17, 19);
-  $: fivePosts = posts.slice(19, 26);
-  $: sixPosts = posts.slice(26);
+  supaBlogPosts.subscribe((value) => {
+    supa_blog_posts = value;
+  });
+
+  $: zeroPosts = supa_blog_posts.slice(0, 2);
+  $: onePosts = supa_blog_posts.slice(2, 6);
+  $: twoPosts = supa_blog_posts.slice(6, 13);
+  $: threePosts = supa_blog_posts.slice(13, 17);
+  $: fourPosts = supa_blog_posts.slice(17, 19);
+  $: fivePosts = supa_blog_posts.slice(19, 26);
+  $: sixPosts = supa_blog_posts.slice(26);
 </script>
 
 <svelte:head>
