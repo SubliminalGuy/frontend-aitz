@@ -11,7 +11,7 @@
   import { createClient } from "@supabase/supabase-js";
   import nativeToast from "native-toast";
   import emailjs from "emailjs-com";
-  import { beforeUpdate } from "svelte";
+  import { beforeUpdate, onMount } from "svelte";
   import moment from "moment";
 
   let user_comments;
@@ -93,8 +93,9 @@
       },
     ]);
   }
-  // Loads new comment after every update
-  beforeUpdate(async function getComments() {
+
+  // Loads new comment after every mount
+  onMount(async function getComments() {
     let { data: comments, error } = await supabase.from("Comments").select("*");
     userComments.set(comments);
   });

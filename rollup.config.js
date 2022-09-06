@@ -100,6 +100,7 @@ export default {
         values: {
           "process.browser": false,
           "process.env.NODE_ENV": JSON.stringify(mode),
+          "process.env.SUPABASE_KEY": JSON.stringify(process.env.SUPABASE_KEY),
         },
       }),
       svelte({
