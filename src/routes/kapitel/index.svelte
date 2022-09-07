@@ -28,16 +28,8 @@
 <h1>Kapitelübersicht</h1>
 
 <h2 class="chapter-mark">0. Prolog</h2>
-<!-- <Chapters subchapters={zeroPosts} /> -->
-<ul>
-  {#each zeroPosts as post}
-    <li>
-      <a class="main-title" rel="prefetch" href="kapitel/{post.Slug}">
-        {post.Title}
-      </a>
-    </li>
-  {/each}
-</ul>
+<Chapters subchapters={zeroPosts} />
+<a rel="prefetch" href="kapitel/0.1-inauguration">Bla</a>
 
 <h2 class="chapter-mark">1. DiEM25 für Anfänger*innen</h2>
 <Chapters subchapters={onePosts} />
