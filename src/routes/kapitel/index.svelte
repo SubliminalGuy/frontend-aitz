@@ -145,7 +145,7 @@
 <style>
   .chapter-mark {
     color: rgb(240, 25, 45);
-    margin: 0;
+    margin-bottom: 1rem;
   }
 
   .link-hidden {
