@@ -140,11 +140,7 @@
 <a class="link-hidden" rel="prefetch" href="kapitel/6.4.-eine-liebeserklaerung"
   >30</a
 >
-<a
-  class="link-hidden"
-  rel="prefetch"
-  href="kapitel/5.7.-digitale-selbstverteidigung">31</a
->
+<a class="link-hidden" rel="prefetch" href="kapitel/6.5.-vital-cells">31</a>
 
 <style>
   .chapter-mark {
