@@ -40,10 +40,29 @@
 <a class="link-hidden" rel="prefetch" href="kapitel/1.2.-dsc-berlin">4</a>
 <a class="link-hidden" rel="prefetch" href="kapitel/1.3.-european-new-deal">5</a
 >
-<a class="link-hidden" rel="prefetch" href="kapitel/0.1-inauguration">6</a>
+<a class="link-hidden" rel="prefetch" href="kapitel/1.4.-happy-birthday">6</a>
 
 <h2 class="chapter-mark">2. Europäischer Frühling</h2>
 <Chapters subchapters={twoPosts} />
+<a class="link-hidden" rel="prefetch" href="kapitel/2.1.-demokratie-in-europa"
+  >7</a
+>
+<a class="link-hidden" rel="prefetch" href="kapitel/2.2.-im-vorstand">8</a>
+<a class="link-hidden" rel="prefetch" href="kapitel/2.3.-demokratie-in-bewegung"
+  >9</a
+>
+<a
+  class="link-hidden"
+  rel="prefetch"
+  href="kapitel/2.4.-mit-varoufakis-in-der-bar">10</a
+>
+<a class="link-hidden" rel="prefetch" href="kapitel/2.5.-konstruktionsfehler"
+  >11</a
+>
+<a class="link-hidden" rel="prefetch" href="kapitel/2.6.-der-spitzenkandidat"
+  >12</a
+>
+<a class="link-hidden" rel="prefetch" href="kapitel/1.4.-happy-birthday">13</a>
 
 <h2 class="chapter-mark">3. Im Bundeskollektiv</h2>
 <Chapters subchapters={threePosts} />
@@ -65,6 +84,7 @@
 
   .link-hidden {
     visibility: hidden;
+    margin: 0;
   }
 
   h2 {
