@@ -62,24 +62,94 @@
 <a class="link-hidden" rel="prefetch" href="kapitel/2.6.-der-spitzenkandidat"
   >12</a
 >
-<a class="link-hidden" rel="prefetch" href="kapitel/1.4.-happy-birthday">13</a>
+<a class="link-hidden" rel="prefetch" href="kapitel/2.7.-wahlkampfmodus">13</a>
 
 <h2 class="chapter-mark">3. Im Bundeskollektiv</h2>
 <Chapters subchapters={threePosts} />
+<a
+  class="link-hidden"
+  rel="prefetch"
+  href="kapitel/3.1.-ein-green-new-deal-fuer-europa">14</a
+>
+<a class="link-hidden" rel="prefetch" href="kapitel/3.2.-versammlung-in-prag"
+  >15</a
+>
+<a class="link-hidden" rel="prefetch" href="kapitel/3.3.-persona-non-grata"
+  >16</a
+>
+<a
+  class="link-hidden"
+  rel="prefetch"
+  href="kapitel/3.4.-bundeskollektiv-versus-varoufakis">17</a
+>
 
 <h2 class="chapter-mark">4. DiEM25 but better?</h2>
 <Chapters subchapters={fourPosts} />
+<a class="link-hidden" rel="prefetch" href="kapitel/4.1.-what-the-fuck-happened"
+  >18</a
+>
+<a class="link-hidden" rel="prefetch" href="kapitel/4.2.-die-bewegung-stehlen"
+  >19</a
+>
 
 <h2 class="chapter-mark">5. Die Lokalgruppe</h2>
 <Chapters subchapters={fivePosts} />
+<a class="link-hidden" rel="prefetch" href="kapitel/5.1.-onboarding-mit-charme"
+  >20</a
+>
+<a class="link-hidden" rel="prefetch" href="kapitel/5.2.-das-1-zu-1-gespraech"
+  >21</a
+>
+<a
+  class="link-hidden"
+  rel="prefetch"
+  href="kapitel/5.3.-das-aktivistinnen-treffen-teil-1">22</a
+>
+<a
+  class="link-hidden"
+  rel="prefetch"
+  href="kapitel/5.4.-das-aktivistinnen-treffen-teil-2">23</a
+>
+<a class="link-hidden" rel="prefetch" href="kapitel/5.5.-mit-system-zum-konsens"
+  >24</a
+>
+<a
+  class="link-hidden"
+  rel="prefetch"
+  href="kapitel/5.6.-die-sicherheit-der-gruppe">25</a
+>
+<a
+  class="link-hidden"
+  rel="prefetch"
+  href="kapitel/5.7.-digitale-selbstverteidigung">26</a
+>
 
 <h2 class="chapter-mark">6. Politische Ökosysteme</h2>
 <Chapters subchapters={sixPosts} />
+<a class="link-hidden" rel="prefetch" href="kapitel/6.1-politik-als-plattform"
+  >27</a
+>
+<a class="link-hidden" rel="prefetch" href="kapitel/6.2.-extinction-rebellion"
+  >28</a
+>
+<a
+  class="link-hidden"
+  rel="prefetch"
+  href="kapitel/6.3.-vertikal-oder-horizontal">29</a
+>
+<a class="link-hidden" rel="prefetch" href="kapitel/6.4.-eine-liebeserklaerung"
+  >30</a
+>
+<a
+  class="link-hidden"
+  rel="prefetch"
+  href="kapitel/5.7.-digitale-selbstverteidigung">31</a
+>
 
 <style>
   .chapter-mark {
     color: rgb(240, 25, 45);
-    margin: 1em;
+    margin: 0;
   }
 
   .link-hidden {
