@@ -29,10 +29,18 @@
 
 <h2 class="chapter-mark">0. Prolog</h2>
 <Chapters subchapters={zeroPosts} />
-<a rel="prefetch" href="kapitel/0.1-inauguration">Bla</a>
+<a class="link-hidden" rel="prefetch" href="kapitel/0.1-inauguration">1</a>
+<a class="link-hidden" rel="prefetch" href="kapitel/0.2-d-wie-in-demokratie"
+  >2</a
+>
 
 <h2 class="chapter-mark">1. DiEM25 für Anfänger*innen</h2>
 <Chapters subchapters={onePosts} />
+<a class="link-hidden" rel="prefetch" href="kapitel/1.1-erstkontakt">3</a>
+<a class="link-hidden" rel="prefetch" href="kapitel/1.2.-dsc-berlin">4</a>
+<a class="link-hidden" rel="prefetch" href="kapitel/1.3.-european-new-deal">5</a
+>
+<a class="link-hidden" rel="prefetch" href="kapitel/0.1-inauguration">6</a>
 
 <h2 class="chapter-mark">2. Europäischer Frühling</h2>
 <Chapters subchapters={twoPosts} />
@@ -53,6 +61,10 @@
   .chapter-mark {
     color: rgb(240, 25, 45);
     margin: 1em;
+  }
+
+  .link-hidden {
+    visibility: hidden;
   }
 
   h2 {
