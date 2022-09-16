@@ -30,6 +30,7 @@
 <h2 class="chapter-mark">0. Prolog</h2>
 <Chapters subchapters={zeroPosts} />
 <a class="link-hidden" rel="prefetch" href="kapitel/0.1-inauguration">1</a>
+<a class="link-hidden" rel="prefetch" href="dashboard">1a</a>
 <a class="link-hidden" rel="prefetch" href="kapitel/0.2-d-wie-in-demokratie"
   >2</a
 >
