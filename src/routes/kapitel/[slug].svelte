@@ -1,4 +1,5 @@
 <script context="module">
+  // Makes the params from the url accessible
   export async function preload({ params, query }) {
     return {
       xslug: params.slug,
@@ -11,7 +12,7 @@
   import { createClient } from "@supabase/supabase-js";
   import nativeToast from "native-toast";
   import emailjs from "emailjs-com";
-  import { beforeUpdate, onMount } from "svelte";
+  import { onMount } from "svelte";
   import moment from "moment";
 
   let user_comments;
@@ -30,7 +31,6 @@
   $: nextSlug = supa_posts[slugIndex + 1]
     ? supa_posts[slugIndex + 1].Slug
     : "nada";
-  //let site_comments = user_comments
 
   supaBlogPosts.subscribe((value) => {
     supa_posts = value;
@@ -39,7 +39,6 @@
 
   function sendText() {
     insertComment(supa_post[0].Slug, username, userText);
-    //getComments()
 
     // emailjs Integration //
 
@@ -92,6 +91,9 @@
         markdown,
       },
     ]);
+    if (error) {
+      console.log(error);
+    }
   }
 
   // Loads new comment after every mount

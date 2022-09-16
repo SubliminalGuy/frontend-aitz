@@ -1,13 +1,15 @@
 <script>
   import Nav from "../components/Nav.svelte";
-  import { modalClicked } from "../stores";
+  import { modalClicked, isAuthenticated } from "../stores";
   import { userComments, supaBlogPosts } from "../stores";
-  import { onMount } from "svelte";
+  import { onMount, beforeUpdate } from "svelte";
   import { createClient } from "@supabase/supabase-js";
 
   export let segment;
 
   let modalFired;
+  let isAuth;
+
   const supabaseKey = process.env.SUPABASE_KEY;
 
   const unsubscribe = modalClicked.subscribe((value) => {
@@ -19,11 +21,24 @@
     supabaseKey
   );
 
+  function turnOnAuth() {
+    isAuthenticated.update((value) => true);
+  }
+
   function switchModal() {
     setTimeout(function () {
       modalClicked.update((value) => !value);
     }, 1000);
   }
+
+  function turnOffAuth() {
+    isAuthenticated.update((value) => false);
+  }
+
+  const handleLogout = async () => {
+    turnOffAuth();
+    const { error } = await supabase.auth.signOut();
+  };
 
   //Make a supabaserequest
   onMount(async function getComments() {
@@ -35,6 +50,21 @@
   onMount(async function getBlogPosts() {
     let { data: posts, error } = await supabase.from("Blogs").select("*");
     supaBlogPosts.set(posts);
+  });
+
+  // Set store variable isAuthenticated to true when supabase token is in local storage
+  beforeUpdate(() => {
+    if (localStorage.getItem("supabase.auth.token") !== null) {
+      //console.log("User Authenticated!");
+      turnOnAuth();
+    } else {
+      turnOffAuth();
+    }
+  });
+
+  // Loads the isAuthenticated state from store when component mounts
+  onMount(() => {
+    isAuthenticated.subscribe((value) => (isAuth = value));
   });
 </script>
 
@@ -59,6 +89,16 @@
     <div class="b-link">
       <a on:click={switchModal} href="/datenschutz">datenschutz</a>
     </div>
+    {#if !isAuth}
+      <div class="b-link">
+        <a on:click={switchModal} href="/login">login</a>
+      </div>
+    {/if}
+    {#if isAuth}
+      <div class="b-link">
+        <a on:click={switchModal} on:click={handleLogout} href="/">logout</a>
+      </div>
+    {/if}
   </div>
 {/if}
 
