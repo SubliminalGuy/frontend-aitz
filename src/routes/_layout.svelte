@@ -89,6 +89,11 @@
     <div class="b-link">
       <a on:click={switchModal} href="/datenschutz">datenschutz</a>
     </div>
+    {#if isAuth}
+      <div class="b-link">
+        <a on:click={switchModal} href="/dashboard">dashboard</a>
+      </div>
+    {/if}
     {#if !isAuth}
       <div class="b-link">
         <a on:click={switchModal} href="/login">login</a>

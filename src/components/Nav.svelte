@@ -81,6 +81,15 @@
         href="/datenschutz">datenschutz</a
       >
     </li>
+    {#if isAuth}
+      <li>
+        <a
+          on:click={turnOffModal}
+          aria-current={segment === "dashboard" ? "page" : undefined}
+          href="/dashboard">dashboard</a
+        >
+      </li>
+    {/if}
     {#if !isAuth}
       <li>
         <a

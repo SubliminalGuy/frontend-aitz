@@ -3,6 +3,9 @@
   import * as yup from "yup";
   import nativeToast from "native-toast";
   import { createClient } from "@supabase/supabase-js";
+  import { stores } from "@sapper/app";
+
+  const { session } = stores();
 
   const supabaseKey = process.env.SUPABASE_KEY;
   const supabase = createClient(
@@ -35,13 +38,25 @@
         type: "success",
       });
 
-      // Redirect
-
-      const delay = 2000; // time in milliseconds
+      const delay = 3000; // time in milliseconds
 
       setTimeout(function () {
-        window.location = "/dashboard";
+        if (session !== null) {
+          window.location = "/dashboard";
+        } else {
+          nativeToast({
+            message: `Login ist nur für Admins möglich \u{1F937} `,
+            position: "center",
+            timeout: 2000,
+            type: "success",
+          });
+          setTimeout(() => {
+            window.location = "/";
+          }, delay);
+        }
       }, delay);
+
+      // Redirect
     },
   });
 </script>
